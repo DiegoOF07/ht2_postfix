@@ -54,4 +54,20 @@ public class Stack <T> implements IStack<T> {
     public void setFirstNode(Node<T> node) {
         this.firstNode = node;
     }
+
+    /**
+     * Obtiene el último nodo en los datos
+     * @return El último nodo de los datos
+     */
+    public Node<T> getLastNode() {
+        return lastNode;
+    }
+
+    /**
+     * Actualiza el valor del último nodo en los datos
+     * @param node El nodo que se actualizará como el último nodo
+     */
+    public void setLastNode(Node<T> lastNode) {
+        this.lastNode = lastNode;
+    }
 }
