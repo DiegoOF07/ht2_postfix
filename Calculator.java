@@ -72,7 +72,7 @@ public class Calculator {
      * @throws IllegalArgumentException Si se intenta realizar una división entre 0
      */
     public int divide(int a, int b) {
-        if (a != 0) {
+        if (b != 0) {
             double c = a / b;
             return (int) Math.round(c);
         } else {
