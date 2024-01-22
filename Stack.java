@@ -38,4 +38,20 @@ public class Stack <T> implements IStack<T> {
         }
         return null;
     }
+
+    /**
+     * Obtiene el primer nodo en los datos
+     * @return El primer nodo de los datos
+     */
+    public Node<T> getFirstNode() {
+        return firstNode;
+    }
+
+    /**
+     * Actualiza el valor del primer nodo en los datos
+     * @param node El nodo que se actualizará como el primer nodo
+     */
+    public void setFirstNode(Node<T> node) {
+        this.firstNode = node;
+    }
 }

@@ -15,7 +15,7 @@ public class Calculator {
      * @return La operación a realizar
      * @throws IllegalArgumentException Si el operador ingresado no es válido
      */
-    public static int calculate(char operator, int a, int b) {
+    public int calculate(char operator, int a, int b) {
         switch (operator) {
             case '+':
                 return add(a, b);
@@ -37,7 +37,7 @@ public class Calculator {
      * @param b El segundo número
      * @return La suma de los dos números enteros
      */
-    public static int add(int a, int b) {
+    public int add(int a, int b) {
         return a + b;
     }
 
@@ -48,7 +48,7 @@ public class Calculator {
      * @param b El segundo número
      * @return La resta de los dos números enteros
      */
-    public static int subtract(int a, int b) {
+    public int subtract(int a, int b) {
         return a - b;
     }
 
@@ -59,7 +59,7 @@ public class Calculator {
      * @param b El segundo número
      * @return La multiplicación de los dos números enteros
      */
-    public static int multiply(int a, int b) {
+    public int multiply(int a, int b) {
         return a * b;
     }
 
@@ -71,11 +71,12 @@ public class Calculator {
      * @return La división de los dos números enteros o el valor de 0 si se intenta dividir entre 0
      * @throws IllegalArgumentException Si se intenta realizar una división entre 0
      */
-    public static int divide(int a, int b) {
-        if (b != 0) {
+    public int divide(int a, int b) {
+        if (a != 0) {
             double c = a / b;
             return (int) Math.round(c);
         } else {
+            System.out.println("\nResultado: No se puede realizar una división entre 0");
             throw new IllegalArgumentException("No se puede realizar una división entre 0");
         }
     }
