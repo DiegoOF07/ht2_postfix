@@ -1,3 +1,4 @@
+package OtherCalculator;
 import java.io.File;
 /**
  * @author Diego Flores
@@ -6,7 +7,7 @@ import java.io.File;
  */
 public class StackManager {
     Calculator calculator = new Calculator();
-    Reader reader = new Reader("datos.txt");
+    Reader reader = new Reader("./OtherCalculator/datos.txt");
     Stack<String> myStack = new Stack<String>();
     
     /**
@@ -15,7 +16,8 @@ public class StackManager {
      *              postfix y mostrar el resultado
      */
     public void manageOperations() throws Exception{
-        File fileReader = new File("datos.txt");
+
+        File fileReader = new File("./OtherCalculator/datos.txt");
         if(fileReader.exists()){
             for (String expresion : reader.read()) {
                 char digits[] = expresion.replace(" ", "").toCharArray();
@@ -52,7 +54,7 @@ public class StackManager {
                 }
             }
         } else {
-            System.out.println("\nNo sé encontró el archivo datos.txt con las expresiones postfix");
+            System.out.println("\nNo sé encontró el archivo datos.txt, agreguelo a la carpeta de OtherCalculator");
         } 
     }
 }

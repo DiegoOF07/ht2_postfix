@@ -1,3 +1,4 @@
+package OtherCalculator;
 /**
  * @author Diego Flores
  * @creationDate 19/01/2024
